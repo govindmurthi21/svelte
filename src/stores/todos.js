@@ -16,10 +16,9 @@ function createTodos() {
             const resp = await ax.post('https://jsonplaceholder.typicode.com/todos', {title: text, completed: false});
             update(t => t.push(resp.data));
         },
-		setCompleted: (id) => {
-            const todo = todos.find(t => t.id === id);
+		toggleCompleted: (todo) => {
             todo.completed = !todo.completed;
-
+            update(tds => tds);
         }
 	};
 }
