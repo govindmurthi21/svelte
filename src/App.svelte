@@ -4,6 +4,7 @@
 	import Home from './Home.svelte';
 	import About from './About.svelte';
 	import Todos from './Todos.svelte';
+	import TodosWithStore from './pages/todos/index.svelte';
 </script>
 
 <main>
@@ -13,6 +14,7 @@
 		<Route fallback path="*" component={Home} />
 		<Route path="/about" component={About} />
 		<Route path="/todos" component={Todos} />
+		<Route path="/todoswithstore" component={TodosWithStore} />
 	</Router>
 </main>
 

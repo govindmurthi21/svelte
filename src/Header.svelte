@@ -12,6 +12,9 @@
     <div class="nav nav-todos">
     <Link href="/todos" class="nav-link">Todos</Link>
   </div>
+      <div class="nav nav-todos">
+    <Link href="/todoswithstore" class="nav-link">Todos With Store</Link>
+  </div>
 </header>
 
 <style>
