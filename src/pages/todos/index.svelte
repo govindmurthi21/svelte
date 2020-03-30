@@ -1,5 +1,6 @@
 <script>
     import Todo from './todo.svelte';
+    import AddTodo from './addtodo.svelte';
     import {todoStore} from '../../stores/todos';
     import { onMount } from 'svelte';
 
@@ -13,10 +14,7 @@
 
 
 <div class="todos-container">
-    <!-- <div class="add-todo-container">
-        <input class="add-todo-text" type="text" name="add" id="add" bind:value={newTodoText}>
-        <button class="add-todo-btn" on:click={addTodo}>Add Todo</button>
-    </div> -->
+    <AddTodo />
     {#each $todoStore as todo, i}
          <Todo todo={todo} />
     {/each}

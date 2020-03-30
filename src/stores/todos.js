@@ -14,7 +14,7 @@ function createTodos() {
         },
 		addTodo: async (text) => {
             const resp = await ax.post('https://jsonplaceholder.typicode.com/todos', {title: text, completed: false});
-            update(t => t.push(resp.data));
+            update(t => [...t, resp.data]);
         },
 		toggleCompleted: (todo) => {
             todo.completed = !todo.completed;
